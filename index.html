@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pertanyaan Roblox</title>
+<style>
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+}
+
+input[type="text"] {
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#response {
+  margin-top: 20px;
+  font-size: 18px;
+  color: green;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Ayo kita bermain Roblox?</h1>
+  <button onclick="checkAnswer('iya')">iya</button>
+  <button onclick="checkAnswer('tidak')">tidak</button>
+  <div id="response"></div>
+</div>
+
+<script>
+function checkAnswer(answer) {
+  var responseDiv = document.getElementById("response");
+  if (answer === "iya") {
+    responseDiv.textContent = "iya";
+    responseDiv.style.color = "green";
+  } else if (answer === "tidak") {
+    responseDiv.textContent = "dasar jamet pasti mau kuliah,yaudah semangat kuliahnya";
+    responseDiv.style.color = "red";
+  } else {
+    responseDiv.textContent = "iya atau tidak";
+    responseDiv.style.color = "orange";
+  }
+}
+</script>
+
+</body>
+</html>
